@@ -4,7 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-       /*
+        if (args.length < 1) {
+            System.out.println("args are not correct.");
+            System.exit(1);
+        }
+
+        String expr = args[0];
+        Expression e = new Expression(expr);
+        System.out.println(e.eval());
+    }
+
+    private void test() {
+        /*
        results:
        /usr/local/java/jdk1.7.0_45/bin/java -Didea.launcher.port=7534 -Didea.launcher.bin.path=/home/alan/Downloads/idea-IU-129.1359/bin -Dfile.encoding=UTF-8 -classpath /usr/local/java/jdk1.7.0_45/jre/lib/plugin.jar:/usr/local/java/jdk1.7.0_45/jre/lib/jfr.jar:/usr/local/java/jdk1.7.0_45/jre/lib/jfxrt.jar:/usr/local/java/jdk1.7.0_45/jre/lib/management-agent.jar:/usr/local/java/jdk1.7.0_45/jre/lib/jsse.jar:/usr/local/java/jdk1.7.0_45/jre/lib/charsets.jar:/usr/local/java/jdk1.7.0_45/jre/lib/deploy.jar:/usr/local/java/jdk1.7.0_45/jre/lib/rt.jar:/usr/local/java/jdk1.7.0_45/jre/lib/javaws.jar:/usr/local/java/jdk1.7.0_45/jre/lib/jce.jar:/usr/local/java/jdk1.7.0_45/jre/lib/resources.jar:/usr/local/java/jdk1.7.0_45/jre/lib/ext/localedata.jar:/usr/local/java/jdk1.7.0_45/jre/lib/ext/sunjce_provider.jar:/usr/local/java/jdk1.7.0_45/jre/lib/ext/sunpkcs11.jar:/usr/local/java/jdk1.7.0_45/jre/lib/ext/zipfs.jar:/usr/local/java/jdk1.7.0_45/jre/lib/ext/dnsns.jar:/usr/local/java/jdk1.7.0_45/jre/lib/ext/sunec.jar:/home/alan/Documents/projects/challenge/out/production/challenge:/home/alan/Documents/projects/challenge/lib/junit-4.9.jar:/home/alan/Documents/projects/challenge/lib/hamcrest-core-1.1.jar:/home/alan/Downloads/idea-IU-129.1359/lib/idea_rt.jar com.intellij.rt.execution.application.AppMain calculator.Main
         3
@@ -47,4 +58,5 @@ public class Main {
         e = new Expression("let(a, let(b, let(c, 20, add(c,10)), add(b, b)), let(b, 20, add(a, b)))");
         System.out.println(e.eval());
     }
+
 }
