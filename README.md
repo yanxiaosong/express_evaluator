@@ -34,7 +34,7 @@ for example,
 
 
 ## Assumptions
-###1. Variable scope
+#### 1. Variable scope
 
 in 
 
@@ -44,7 +44,7 @@ in
 * variables defined in \<2\> will not work in \<3\>.
 * variable defined in \<3\> will override the variable in \<1\>.
 
-###2. Multiple parentheses around expression is legal.
+#### 2. Multiple parentheses around expression is legal.
 for example,  ((3)),  ((let(a,5,add(a,1)))),  ((a)), they are all legal.
 
 
