@@ -17,7 +17,9 @@ An expression is one of the of the following:
 * Variables: strings of characters, where each character is one of a-z, A-Z
 * Arithmetic functions: add, sub, mult, div, each taking two arbitrary expressions as arguments.  In other words, each argument may be any of the expressions on this list.
 * A “let” operator for assigning values to variables:
+
   >let(\<variable name>\, \<value expression\>, \<expression where variable is used\>) 
+
   As with arithmetic functions,  the value expression and the expression where the variable is used may be an arbitrary expression from this list.
 
 
@@ -39,8 +41,8 @@ in
 > let(\<1. variable name\>, \<2. value expression\>, \<3. expression where variable is used\>)
 
 
-variables defined in \<2\> will not work in \<3\>.
-variable defined in \<3\> will  the variable in \<1\> 
+* variables defined in \<2\> will not work in \<3\>.
+* variable defined in \<3\> will override the variable in \<1\>.
 
 ###2. Multiple parentheses around expression is legal.
 for example,  ((3)),  ((let(a,5,add(a,1)))),  ((a)), they are all legal.
